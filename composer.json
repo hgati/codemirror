@@ -1,0 +1,9 @@
+{
+    "name": "hgati/codemirror",
+    "type": "magento-module",
+    "description": "어드민 에디터를 컬러링 지원되는 코드에디터로 변경",
+  
+    "require": {
+      "magento-hackathon/magento-composer-installer": "*"
+    }
+  }
