@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!--
+ * ==========================================
+ *
+ * Created by:  Milan Simek
+ * Company:     Plugin Company
+ *
+ * ==========================================
+ *
+ *  LICENSE: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ *  YOU WILL ALSO FIND A COPY OF THE LICENSE IN THE PROJECT ROOT OR DOWNLOADED ZIP FILE
+ *
+ *   Magento Syntax Highlighter Extension by Plugin Company
+ *
+ *   Copyright (C) 2014-2015 Plugin Company
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * ==========================================
+ *
+ * FOR QUESTIONS AND SUPPORT
+ * PLEASE DON'T HESITATE TO CONTACT US AT:
+ *
+ * SUPPORT@PLUGIN.COMPANY
+ *
+ * SHARING IS CARING :-) FEEL FREE TO CONTRIBUTE @ https://github.com/PluginCompany/magento-syntax-highlighter
+ *
+ * ==========================================
+-->
+<config>
+    <modules>
+        <Plugincompany_Syntaxhighlighter>
+            <version>1.0.3</version>
+        </Plugincompany_Syntaxhighlighter>
+    </modules>
+    <global>
+        <blocks>
+            <plugincompany_syntaxhighlighter>
+                <class>Plugincompany_Syntaxhighlighter_Block</class>
+            </plugincompany_syntaxhighlighter>
+        </blocks>
+        <helpers>
+            <plugincompany_syntaxhighlighter>
+                <class>Plugincompany_Syntaxhighlighter_Helper</class>
+            </plugincompany_syntaxhighlighter>
+        </helpers>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <plugincompany_syntaxhighlighter>
+                    <file>plugincompany_syntaxhighlighter.xml</file>
+                </plugincompany_syntaxhighlighter>
+            </updates>
+        </layout>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <plugincompany_syntaxhighlighter>
+                                            <title>Syntax Highlighter Config</title>
+                                        </plugincompany_syntaxhighlighter>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <plugincompany_syntaxhighlighter>
+            <plugincompany_syntaxhighlighter_group>
+                <enabled>1</enabled>
+                <cms_page>1</cms_page>
+                <cms_block>1</cms_block>
+                <product>1</product>
+                <categories>1</categories>
+                <category_fields>custom_layout_update,description,meta_description,meta_keywords</category_fields>
+                <product_fields>custom_layout_update,description,in_depth,meta_description,meta_keyword,short_description</product_fields>
+                <newsletter>1</newsletter>
+                <transactional>1</transactional>
+            </plugincompany_syntaxhighlighter_group>
+        </plugincompany_syntaxhighlighter>
+    </default>
+</config>

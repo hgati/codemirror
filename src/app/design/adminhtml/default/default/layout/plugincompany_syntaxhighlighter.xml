@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!--
+ * ==========================================
+ *
+ * Created by:  Milan Simek
+ * Company:     Plugin Company
+ *
+ * ==========================================
+ *
+ *  LICENSE: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ *  YOU WILL ALSO FIND A COPY OF THE LICENSE IN THE PROJECT ROOT OR DOWNLOADED ZIP FILE
+ *
+ *   Magento Syntax Highlighter Extension by Plugin Company
+ *
+ *   Copyright (C) 2014-2015 Plugin Company
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * ==========================================
+ *
+ * FOR QUESTIONS AND SUPPORT
+ * PLEASE DON'T HESITATE TO CONTACT US AT:
+ *
+ * SUPPORT@PLUGIN.COMPANY
+ *
+ * SHARING IS CARING :-) FEEL FREE TO CONTRIBUTE @ https://github.com/PluginCompany/magento-syntax-highlighter
+ *
+ * ==========================================
+-->
+<layout>
+   <adminhtml_cms_block_edit>
+       <update handle="plugincompany_codemirror" />
+    </adminhtml_cms_block_edit>
+
+    <adminhtml_cms_page_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_cms_page_edit>
+
+    <adminhtml_catalog_product_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_catalog_product_edit>
+
+    <adminhtml_newsletter_template_new>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_newsletter_template_new>
+
+    <adminhtml_newsletter_template_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_newsletter_template_edit>
+
+    <adminhtml_catalog_category_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_catalog_category_edit>
+
+    <adminhtml_system_email_template_edit>
+        <update handle="plugincompany_codemirror" />
+    </adminhtml_system_email_template_edit>
+
+    <plugincompany_codemirror>
+        <reference name="head">
+            <action method="addJs">
+                <script>plugincompany/jquerynoconflict.js</script>
+            </action>
+            <action method="addJs">
+                <script>plugincompany/codemirror/codemirror-compressed.js</script>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/show-hint.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/codemirror.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/fullscreen.css</name>
+            </action>
+        </reference>
+        <reference name="content" after="-">
+            <block type="plugincompany_syntaxhighlighter/syntaxhighlighter" template="plugincompany/syntaxhighlighter/syntaxhighlighter.phtml"/>
+        </reference>
+    </plugincompany_codemirror>
+
+    <!-- clever CMS -->
+    <adminhtml_cms_page_index>
+        <reference name="head">
+            <action method="addJs">
+                <script>plugincompany/jquerynoconflict.js</script>
+            </action>
+            <action method="addJs">
+                <script>plugincompany/codemirror/codemirror-compressed.js</script>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/show-hint.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/codemirror.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>plugincompany/codemirror/fullscreen.css</name>
+            </action>
+        </reference>
+        <reference name="before_body_end" after="-">
+            <block type="plugincompany_syntaxhighlighter/syntaxhighlighter" template="plugincompany/syntaxhighlighter/syntaxhighlighter.phtml"/>
+        </reference>
+    </adminhtml_cms_page_index>
+</layout>

@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!--
+ * ==========================================
+ *
+ * Created by:  Milan Simek
+ * Company:     Plugin Company
+ *
+ * ==========================================
+ *
+ *  LICENSE: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ *  YOU WILL ALSO FIND A COPY OF THE LICENSE IN THE PROJECT ROOT OR DOWNLOADED ZIP FILE
+ *
+ *   Magento Syntax Highlighter Extension by Plugin Company
+ *
+ *   Copyright (C) 2014-2015 Plugin Company
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * ==========================================
+ *
+ * FOR QUESTIONS AND SUPPORT
+ * PLEASE DON'T HESITATE TO CONTACT US AT:
+ *
+ * SUPPORT@PLUGIN.COMPANY
+ *
+ * SHARING IS CARING :-) FEEL FREE TO CONTRIBUTE @ https://github.com/PluginCompany/magento-syntax-highlighter
+ *
+ * ==========================================
+-->
+<config>
+    <sections>
+        <plugincompany_syntaxhighlighter translate="label" module="plugincompany_syntaxhighlighter">
+            <label>Syntax Highlighter</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <plugincompany_syntaxhighlighter_group translate="label">
+                    <label>Enable Syntax Highlighting</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable the extension</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>-1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <cms_page translate="label">
+                            <label>Enable for CMS pages</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_page>
+                        <cms_block translate="label">
+                            <label>Enable for CMS blocks</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_block>
+                        <product translate="label">
+                            <label>Enable for products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product>
+                        <product_fields translate="label">
+                            <label>Enabled product attributes</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>Plugincompany_Syntaxhighlighter_Model_System_Config_Source_Producttextfields</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <depends><product>1</product></depends>
+                        </product_fields>
+                        <categories translate="label">
+                            <label>Enable for categories</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categories>
+                        <category_fields translate="label">
+                            <label>Enabled category attributes</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>Plugincompany_Syntaxhighlighter_Model_System_Config_Source_Categorytextfields</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <depends><categories>1</categories></depends>
+                        </category_fields>
+                        <newsletter translate="label">
+                            <label>Enable for newsletter templates</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </newsletter>
+                        <transactional translate="label">
+                            <label>Enable for transactional emails</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </transactional>
+                    </fields>
+                </plugincompany_syntaxhighlighter_group>
+            </groups>
+        </plugincompany_syntaxhighlighter>
+    </sections>
+</config>
