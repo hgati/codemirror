@@ -1,9 +1,14 @@
 {
-    "name": "hgati/codemirror",
-    "type": "magento-module",
-    "description": "어드민 에디터를 컬러링 지원되는 코드에디터로 변경",
-  
-    "require": {
-      "magento-hackathon/magento-composer-installer": "*"
-    }
+  "name": "hgati/codemirror",
+  "type": "magento-module",
+  "description": "어드민 에디터를 컬러링 지원되는 코드에디터로 변경",
+  "keywords": ["magento codemirror","magento html editor"],
+  "homepage": "https://github.com/hgati/codemirror",
+  "license": "MIT",
+  "authors": [{ "name": "Dennis Lee", "email": "cobays@gmail.com", "homepage": "https://github.com/hgati", "role": "Magento 1.x Developer" }],
+
+  "require": {
+    "php": ">=7.0.0",
+    "magento-hackathon/magento-composer-installer": "*"
   }
+}
